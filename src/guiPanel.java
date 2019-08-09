@@ -19,7 +19,7 @@ public class guiPanel extends JPanel{
 	JLabel labelSegundos, ls;
 	JPanel panel;
 	JPanel panel2;
-	int horas = 22, minutos, segundos;
+	int horas = 23, minutos = 59, segundos = 55;
 
 	
 	public guiPanel () {
@@ -54,6 +54,7 @@ public class guiPanel extends JPanel{
 					minutos = 0;
 					horas++;
 					System.out.println(horas);
+					labelMinutos.setText(Integer.toString(minutos) + " :");
 					labelHoras.setText(Integer.toString(horas) + " :");
 				}
 				
@@ -71,7 +72,7 @@ public class guiPanel extends JPanel{
 			}
 		};
 		
-		t_segundos.schedule(tarea, 10, 1);
+		t_segundos.schedule(tarea, 10, 1000);
 		
 		panel = new JPanel();
 		lh = new JLabel("H");
